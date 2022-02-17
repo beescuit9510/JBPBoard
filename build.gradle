@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.board'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
@@ -15,7 +15,11 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    runtimeOnly 'mysql:mysql-connector-java'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.6.3'
+    implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.9'
+    implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.7'
+    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
+//    runtimeOnly 'mysql:mysql-connector-java'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
